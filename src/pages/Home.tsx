@@ -458,7 +458,7 @@ const Home: React.FC = () => {
               <div className="relative w-full h-full">
                 {/* Simple Profile Image Container */}
                 <motion.div
-                  className="w-full h-full rounded-2xl bg-gradient-to-br from-gray-900/40 to-emerald-900/20 backdrop-blur-sm overflow-hidden shadow-2xl border border-theme"
+                  className="w-full h-full rounded-full overflow-hidden shadow-2xl border border-theme"
                   whileHover={{ scale: 1.02, y: -5 }}
                   transition={{ duration: 0.3 }}
                 >
@@ -475,7 +475,7 @@ const Home: React.FC = () => {
                   />
                   {/* Fallback User Icons */}
                   <div
-                    className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-900/60 to-emerald-900/30"
+                    className="w-full h-full flex items-center justify-center"
                     style={{ display: "none" }}
                   >
                     <User size={60} className="sm:hidden text-theme-primary" />
