@@ -4,16 +4,16 @@ import {
   Coffee,
   BookOpen,
   Download,
-  Star
+  Star,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import resumeImage from "../assets/images/resume.png";
 
 export default function About() {
   const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = '/files/Lauris-Jay_T._Lorenzo_Resume.pdf';
-    link.download = 'Lauris-Jay_T._Lorenzo_Resume.pdf';
+    const link = document.createElement("a");
+    link.href = "/files/Lauris-Jay_T._Lorenzo_Resume.pdf";
+    link.download = "Lauris-Jay_T._Lorenzo_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -26,9 +26,9 @@ export default function About() {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -38,9 +38,9 @@ export default function About() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const cardVariants = {
@@ -50,16 +50,16 @@ export default function About() {
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
-      }
+        ease: "easeOut",
+      },
     },
     hover: {
       scale: 1.05,
       transition: {
         duration: 0.2,
-        ease: "easeInOut"
-      }
-    }
+        ease: "easeInOut",
+      },
+    },
   };
 
   const badgeVariants = {
@@ -72,14 +72,14 @@ export default function About() {
         delay: 0.8,
         type: "spring",
         stiffness: 200,
-        damping: 10
-      }
-    }
+        damping: 10,
+      },
+    },
   };
 
   return (
-    <motion.section 
-      id="about" 
+    <motion.section
+      id="about"
       className="py-20 px-6 bg-black/80"
       initial="hidden"
       whileInView="visible"
@@ -89,57 +89,55 @@ export default function About() {
       <div className="container mx-auto max-w-5xl">
         {/* Header Section */}
         <motion.div className="text-center mb-16" variants={itemVariants}>
-          <motion.h2 
-            className="text-5xl font-bold bg-gradient-to-r from-emerald-400 via-green-400 to-teal-400 bg-clip-text text-transparent mb-4"
+          <motion.h2
+            className="text-4xl font-bold text-center mb-16"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            About Me
+            About{" "}
+            <span className="bg-gradient-to-r from-emerald-400 via-green-400 to-teal-400 bg-clip-text text-transparent">
+              Me
+            </span>
           </motion.h2>
-          <motion.div 
-            className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 mx-auto rounded-full"
-            initial={{ width: 0 }}
-            whileInView={{ width: 96 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          ></motion.div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="grid lg:grid-cols-2 gap-16 items-center"
           variants={containerVariants}
         >
           {/* Content Section */}
           <motion.div className="space-y-8" variants={itemVariants}>
             <motion.div variants={itemVariants}>
-              <motion.h3 
+              <motion.h3
                 className="text-3xl font-bold mb-6 text-white"
                 variants={itemVariants}
               >
-                Crafting Digital 
-                <span className="bg-gradient-to-r from-emerald-400 via-green-400 to-teal-400 bg-clip-text text-transparent ml-2">Excellence</span>
+                Crafting Digital
+                <span className="text-white ml-2">Excellence</span>
               </motion.h3>
-              <motion.p 
+              <motion.p
                 className="text-gray-300 mb-6 leading-relaxed text-lg"
                 variants={itemVariants}
               >
                 I'm a passionate full-stack developer with over 3 years of
-                experience creating digital solutions that make a real impact. I specialize in 
-                transforming complex challenges into elegant, user-friendly experiences.
+                experience creating digital solutions that make a real impact. I
+                specialize in transforming complex challenges into elegant,
+                user-friendly experiences.
               </motion.p>
-              <motion.p 
+              <motion.p
                 className="text-gray-300 mb-8 leading-relaxed text-lg"
                 variants={itemVariants}
               >
-                My approach combines cutting-edge technology with creative problem-solving, 
-                ensuring every project delivers exceptional value and performance.
+                My approach combines cutting-edge technology with creative
+                problem-solving, ensuring every project delivers exceptional
+                value and performance.
               </motion.p>
             </motion.div>
 
             {/* Info Cards */}
-            <motion.div 
+            <motion.div
               className="grid grid-cols-2 gap-4"
               initial="hidden"
               whileInView="visible"
@@ -150,18 +148,18 @@ export default function About() {
                   opacity: 1,
                   transition: {
                     staggerChildren: 0.15,
-                    delayChildren: 0.2
-                  }
-                }
+                    delayChildren: 0.2,
+                  },
+                },
               }}
             >
-              <motion.div 
+              <motion.div
                 className="bg-gray-900 p-4 rounded-xl border border-gray-700 hover:border-emerald-500 transition-all duration-300"
                 variants={{
-                  hidden: { 
-                    opacity: 0, 
+                  hidden: {
+                    opacity: 0,
                     y: 30,
-                    scale: 0.8
+                    scale: 0.8,
                   },
                   visible: {
                     opacity: 1,
@@ -171,18 +169,18 @@ export default function About() {
                       duration: 0.6,
                       ease: "easeOut",
                       type: "spring",
-                      stiffness: 100
-                    }
-                  }
+                      stiffness: 100,
+                    },
+                  },
                 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   y: -5,
-                  transition: { duration: 0.2 }
+                  transition: { duration: 0.2 },
                 }}
               >
                 <div className="flex items-center space-x-3">
-                  <motion.div 
+                  <motion.div
                     className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.5 }}
@@ -196,13 +194,13 @@ export default function About() {
                 </div>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="bg-gray-900 p-4 rounded-xl border border-gray-700 hover:border-green-500 transition-all duration-300"
                 variants={{
-                  hidden: { 
-                    opacity: 0, 
+                  hidden: {
+                    opacity: 0,
                     y: 30,
-                    scale: 0.8
+                    scale: 0.8,
                   },
                   visible: {
                     opacity: 1,
@@ -212,18 +210,18 @@ export default function About() {
                       duration: 0.6,
                       ease: "easeOut",
                       type: "spring",
-                      stiffness: 100
-                    }
-                  }
+                      stiffness: 100,
+                    },
+                  },
                 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   y: -5,
-                  transition: { duration: 0.2 }
+                  transition: { duration: 0.2 },
                 }}
               >
                 <div className="flex items-center space-x-3">
-                  <motion.div 
+                  <motion.div
                     className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.5 }}
@@ -237,13 +235,13 @@ export default function About() {
                 </div>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="bg-gray-900 p-4 rounded-xl border border-gray-700 hover:border-teal-500 transition-all duration-300"
                 variants={{
-                  hidden: { 
-                    opacity: 0, 
+                  hidden: {
+                    opacity: 0,
                     y: 30,
-                    scale: 0.8
+                    scale: 0.8,
                   },
                   visible: {
                     opacity: 1,
@@ -253,18 +251,18 @@ export default function About() {
                       duration: 0.6,
                       ease: "easeOut",
                       type: "spring",
-                      stiffness: 100
-                    }
-                  }
+                      stiffness: 100,
+                    },
+                  },
                 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   y: -5,
-                  transition: { duration: 0.2 }
+                  transition: { duration: 0.2 },
                 }}
               >
                 <div className="flex items-center space-x-3">
-                  <motion.div 
+                  <motion.div
                     className="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.5 }}
@@ -278,13 +276,13 @@ export default function About() {
                 </div>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="bg-gray-900 p-4 rounded-xl border border-gray-700 hover:border-emerald-500 transition-all duration-300"
                 variants={{
-                  hidden: { 
-                    opacity: 0, 
+                  hidden: {
+                    opacity: 0,
                     y: 30,
-                    scale: 0.8
+                    scale: 0.8,
                   },
                   visible: {
                     opacity: 1,
@@ -294,18 +292,18 @@ export default function About() {
                       duration: 0.6,
                       ease: "easeOut",
                       type: "spring",
-                      stiffness: 100
-                    }
-                  }
+                      stiffness: 100,
+                    },
+                  },
                 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   y: -5,
-                  transition: { duration: 0.2 }
+                  transition: { duration: 0.2 },
                 }}
               >
                 <div className="flex items-center space-x-3">
-                  <motion.div 
+                  <motion.div
                     className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.5 }}
@@ -321,18 +319,18 @@ export default function About() {
             </motion.div>
 
             {/* CTA Button */}
-            <motion.button 
+            <motion.button
               onClick={handleDownloadResume}
               className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl font-semibold transition-all duration-300 hover:from-emerald-600 hover:to-teal-600"
               variants={itemVariants}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
-                boxShadow: "0 10px 30px rgba(16, 185, 129, 0.3)"
+                boxShadow: "0 10px 30px rgba(16, 185, 129, 0.3)",
               }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <motion.div 
+              <motion.div
                 className="flex items-center space-x-2"
                 initial={{ x: 0 }}
                 whileHover={{ x: 2 }}
@@ -340,11 +338,11 @@ export default function About() {
               >
                 <motion.div
                   animate={{ y: [0, -2, 0] }}
-                  transition={{ 
-                    duration: 1.5, 
-                    repeat: Infinity, 
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
                     repeatType: "reverse",
-                    ease: "easeInOut"
+                    ease: "easeInOut",
                   }}
                 >
                   <Download size={20} />
@@ -355,21 +353,18 @@ export default function About() {
           </motion.div>
 
           {/* Visual Section */}
-          <motion.div 
-            className="relative"
-            variants={itemVariants}
-          >
+          <motion.div className="relative" variants={itemVariants}>
             {/* Main Profile Card */}
-            <motion.div 
+            <motion.div
               className="bg-gray-900 rounded-3xl p-8 border border-gray-700"
               variants={cardVariants}
-              whileHover={{ 
+              whileHover={{
                 borderColor: "rgb(16, 185, 129)",
-                boxShadow: "0 20px 40px rgba(16, 185, 129, 0.1)"
+                boxShadow: "0 20px 40px rgba(16, 185, 129, 0.1)",
               }}
               transition={{ duration: 0.3 }}
             >
-              <motion.div 
+              <motion.div
                 className="w-full h-80 bg-gray-800 rounded-2xl p-6 relative overflow-hidden"
                 initial={{ scale: 0.9, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
@@ -377,8 +372,8 @@ export default function About() {
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 {/* Resume Image */}
-                <motion.img 
-                  src={resumeImage} 
+                <motion.img
+                  src={resumeImage}
                   alt="Lauris-Jay T. Lorenzo Resume"
                   className="absolute inset-0 w-full h-full object-cover rounded-2xl"
                   initial={{ scale: 1.1 }}
@@ -392,17 +387,17 @@ export default function About() {
               </motion.div>
 
               {/* Achievement Badges */}
-              <motion.div 
+              <motion.div
                 className="absolute -top-6 -right-6 bg-emerald-500 text-white px-6 py-3 rounded-2xl shadow-lg"
                 variants={badgeVariants}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.1,
                   rotate: [0, -5, 5, 0],
-                  transition: { duration: 0.5 }
+                  transition: { duration: 0.5 },
                 }}
               >
                 <div className="text-center">
-                  <motion.div 
+                  <motion.div
                     className="text-2xl font-bold"
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
@@ -415,17 +410,17 @@ export default function About() {
                 </div>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="absolute -bottom-6 -left-6 bg-teal-500 text-white px-6 py-3 rounded-2xl shadow-lg"
                 variants={badgeVariants}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.1,
                   rotate: [0, 5, -5, 0],
-                  transition: { duration: 0.5 }
+                  transition: { duration: 0.5 },
                 }}
               >
                 <div className="text-center">
-                  <motion.div 
+                  <motion.div
                     className="text-2xl font-bold"
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
@@ -438,22 +433,22 @@ export default function About() {
                 </div>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="absolute top-1/2 -right-8 bg-green-500 text-white px-4 py-3 rounded-xl shadow-lg"
                 variants={badgeVariants}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.1,
                   y: -5,
-                  transition: { duration: 0.2 }
+                  transition: { duration: 0.2 },
                 }}
               >
                 <div className="flex items-center space-x-1">
                   <motion.div
                     animate={{ rotate: [0, 360] }}
-                    transition={{ 
-                      duration: 3, 
-                      repeat: Infinity, 
-                      ease: "linear" 
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "linear",
                     }}
                   >
                     <Star size={16} className="fill-current" />
